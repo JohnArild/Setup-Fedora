@@ -2,7 +2,7 @@
 
 # Install dependencies
 sudo dnf install -y \
-    nvim \
+    neovim \
     kitty \
     fish \
     util-linux-user
@@ -23,7 +23,7 @@ cp fish_variables ~/.config/fish/
 cp starship.toml ~/.config/
 mkdir -p ~/.config/kitty
 cp kitty.conf ~/.config/kitty/
-cp current_theme.conf ~/.config/kitty/
+cp current-theme.conf ~/.config/kitty/
 
 # Set shell to Fish
 chsh -s $(which fish)
