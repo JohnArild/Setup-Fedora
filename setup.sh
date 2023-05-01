@@ -4,7 +4,8 @@
 sudo dnf install -y \
     nvim \
     kitty \
-    fish
+    fish \
+    util-linux-user
 
 # Install JetBrains Mono font
 mkdir -p ~/.local/share/fonts 
