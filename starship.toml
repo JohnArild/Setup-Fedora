@@ -1,0 +1,133 @@
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+format = """[](#252B1F)\
+$directory\
+[](fg:#252B1F bg:#96794E)\
+$git_branch\
+$git_status\
+[](fg:#96794E bg:#5B533F)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:#5B533F bg:#3F3B2E)\
+$docker_context\
+$status
+"""
+
+[character]
+success_symbol = "[ ](fg:#3F3B2E)"
+error_symbol =   "[ ](fg:#3F3B2E bg:#A05C44)[](fg:#A05C44)"
+
+[directory]
+style = "bg:#252B1F"
+format = "[$path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[c]
+symbol = " "
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#3F3B2E"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#96794E fg:#252B1F"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#96794E fg:#252B1F"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[gradle]
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:#5B533F"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#5B533F"
+format = '[ ♥ $time ]($style)'
+
+[status]
+disabled = false
+success_symbol = "[ ](fg:#3F3B2E)"
+symbol =   "[$status](fg:#3F3B2E bg:#A05C44)[ ](fg:#A05C44)"
+format = '[$symbol]($style)'
