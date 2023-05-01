@@ -5,4 +5,4 @@ Should also work with other distros that use dnf
 
 Will install: nvim, fish, kitty, starship, chsh, pop-shell and "JetBrains Nerd Font"
 
-![kitty](https://github.com/JohnArild/Setup-Fedora/kitty.png?raw=true)
+![kitty](https://github.com/JohnArild/Setup-Fedora/blob/main/kitty.png?raw=true)
